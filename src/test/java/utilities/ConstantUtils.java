@@ -2,17 +2,11 @@ package utilities;
 
 public class ConstantUtils {
 
-    //base url of the website:
-    // //https://the-internet.herokuapp.com/
+    public static String BASE_URL = "https://www.saucedemo.com";
 
-    public static String BASE_URL = "https://the-internet.herokuapp.com/";
+    // Browser name Chrome or Firefox
+    public static String BROWSER_NAME = "Chrome";
 
-    //browser name
-    public static String BROWSER_NAME = "chrome";
-
-    //Browser type (Headed or headless)
+    // Browser type = Headed / Headless
     public static String BROWSER_TYPE = "Headed";
-
-
-
 }
