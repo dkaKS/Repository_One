@@ -15,7 +15,7 @@ Feature: Verify for the Application
     Then the user should see the home page of the application
 
   @SmokeTest
-  Scenario Outline: 2. Verify Form authentication with invalid credentials using data driven
+  Scenario Outline: 2. Verify Swag Page with invalid credentials using data driven
     When the user login with "<username>" in username and "<password>" in password
     Then the user should "<expectedText>"
 
@@ -23,6 +23,6 @@ Feature: Verify for the Application
       | username      | password     | expectedText              |
       | standarduser  | secret_sauce | Your username is invalid! |
       | standard_user | secretsauce  | Your password is invalid! |
-      | standarduser  | secretsauce  | Your username is invalid! |
+      | standarduser  | secretsauce  | Epic sadface: username and password do not match any user in this service  |
 
 

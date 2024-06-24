@@ -9,4 +9,5 @@ public class ConstantUtils {
 
     // Browser type = Headed / Headless
     public static String BROWSER_TYPE = "Headed";
+    //public static String BROWSER_TYPE = "Headless";
 }

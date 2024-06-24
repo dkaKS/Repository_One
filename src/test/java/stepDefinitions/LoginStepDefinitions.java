@@ -24,13 +24,13 @@ public class LoginStepDefinitions extends WebConnector {
     public void the_user_login_with_in_username_and_in_password(String username, String password) {
         loginPage.setSwagUsername(username);
         loginPage.setSwagPassword(password);
-        loginPage.clickSwagLoginButton();
+
 
     }
 
     @When("the user clicks on login button")
     public void the_user_clicks_on_login_button() {
-
+        loginPage.clickSwagLoginButton();
     }
 
     @Then("the user should see the home page of the application")
@@ -39,7 +39,6 @@ public class LoginStepDefinitions extends WebConnector {
         Thread.sleep(3000);
 
     }
-
 
     @Then("the user should {string}")
     public void the_user_should(String string) {
