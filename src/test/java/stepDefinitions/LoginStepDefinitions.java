@@ -41,8 +41,12 @@ public class LoginStepDefinitions extends WebConnector {
     }
 
     @Then("the user should {string}")
-    public void the_user_should(String string) {
+    public void the_user_should(String expectText) throws InterruptedException {
+      Assert.assertTrue(driver.getPageSource().contains(expectText));
+      Thread.sleep(3000);
 
+      loginPage.clickSwagLogout();
     }
+
 
 }
