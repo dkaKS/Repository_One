@@ -24,5 +24,8 @@ Feature: Verify for the Application
       | standarduser  | secret_sauce | Your username is invalid! |
       | standard_user | secretsauce  | Your password is invalid! |
       | standarduser  | secretsauce  | Epic sadface: username and password do not match any user in this service  |
+      | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out                       |
+
+
 
 
