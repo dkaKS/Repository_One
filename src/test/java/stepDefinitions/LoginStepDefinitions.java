@@ -40,13 +40,19 @@ public class LoginStepDefinitions extends WebConnector {
 
     }
 
-    @Then("the user should {string}")
-    public void the_user_should(String expectText) throws InterruptedException {
-      Assert.assertTrue(driver.getPageSource().contains(expectText));
-      Thread.sleep(3000);
-
-      loginPage.clickSwagLogout();
+    @Then("the user should see the message")
+    public void the_user_should_see_the_message() {
+        Assert.assertTrue(driver.getPageSource().contains("Epic sadface: Sorry, this user has been locked out."));
     }
+
+    @Then("the user should {string}")
+    public void the_user_should(String expectedText) {
+      Assert.assertTrue(driver.getPageSource().contains(expectedText));
+
+
+      //loginPage.clickSwagLogout();
+    }
+
 
 
 }

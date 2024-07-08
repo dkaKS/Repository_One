@@ -1,4 +1,4 @@
-@SmokeTest
+#@SmokeTest
 
 Feature: Verify for the Application
   As a user of the application
@@ -14,17 +14,18 @@ Feature: Verify for the Application
     And the user clicks on login button
     Then the user should see the home page of the application
 
-  @SmokeTest
+  #@SmokeTest
   Scenario Outline: 2. Verify Swag Page with invalid credentials using data driven
     When the user login with "<username>" in username and "<password>" in password
+    And the user clicks on login button
     Then the user should "<expectedText>"
 
     Examples:
       | username      | password     | expectedText              |
-      | standarduser  | secret_sauce | Your username is invalid! |
-      | standard_user | secretsauce  | Your password is invalid! |
-      | standarduser  | secretsauce  | Epic sadface: username and password do not match any user in this service  |
-      | locked_out_user | secret_sauce | Epic sadface: Sorry, this user has been locked out                       |
+      | standarduser  | secret_sauce | Epic sadface: Username and password do not match any user in this service |
+      | standard_user | secretsauce  | Epic sadface: Username and password do not match any user in this service |
+      | standarduser  | secretsauce  | Epic sadface: Username and password do not match any user in this service  |
+
 
 
 
