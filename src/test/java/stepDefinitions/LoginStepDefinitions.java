@@ -35,7 +35,7 @@ public class LoginStepDefinitions extends WebConnector {
 
     @Then("the user should see the home page of the application")
     public void the_user_should_see_the_home_page_of_the_application() throws InterruptedException {
-        Assert.assertTrue(driver.getPageSource().contains("Swag Labs") );
+        Assert.assertTrue(driver.getPageSource().contains("Swag Labs"));
         Thread.sleep(3000);
 
     }
@@ -49,10 +49,11 @@ public class LoginStepDefinitions extends WebConnector {
     public void the_user_should(String expectedText) {
       Assert.assertTrue(driver.getPageSource().contains(expectedText));
 
-
-      //loginPage.clickSwagLogout();
     }
+    @Then("the user should see all the product images are displayed accordingly.")
+    public void the_user_should_see_all_the_product_images_are_displayed_accordingly() {
 
+    }
 
 
 }

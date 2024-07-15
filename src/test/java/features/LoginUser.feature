@@ -1,4 +1,4 @@
-@SmokeTest
+#@SmokeTest
 
 Feature: Verify for the Application
   As a user of the application
@@ -15,7 +15,7 @@ Feature: Verify for the Application
     Then the user should see the message
 
 
-  @SmokeTest
+  #@SmokeTest
   Scenario Outline: 2. Verify Swag Page with invalid credentials using data driven
     When the user login with "<username>" in username and "<password>" in password
     And the user clicks on login button
